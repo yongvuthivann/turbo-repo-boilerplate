@@ -23,6 +23,9 @@ importers:
 
   apps/next-app-router:
     dependencies:
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       next:
         specifier: 14.2.2
         version: 14.2.2(react-dom@18.2.0)(react@18.2.0)
@@ -33,6 +36,15 @@ importers:
         specifier: ^18
         version: 18.2.0(react@18.2.0)
     devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@repo/tailwindcss-config':
+        specifier: workspace:*
+        version: link:../../packages/tailwindcss-config
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       '@types/node':
         specifier: ^20
         version: 20.11.24
@@ -42,6 +54,9 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.2.19
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.19(postcss@8.4.38)
       eslint:
         specifier: ^8
         version: 8.57.0
@@ -82,17 +97,7 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  packages/tailwindcss-config:
-    devDependencies:
-      autoprefixer:
-        specifier: ^10.4.19
-        version: 10.4.19(postcss@8.4.38)
-      postcss:
-        specifier: ^8.4.38
-        version: 8.4.38
-      tailwindcss:
-        specifier: ^3.4.3
-        version: 3.4.3
+  packages/tailwindcss-config: {}
 
   packages/typescript-config: {}
 
@@ -1475,7 +1480,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001612
-      electron-to-chromium: 1.4.745
+      electron-to-chromium: 1.4.746
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: true
@@ -1907,8 +1912,8 @@ packages:
     resolution: {integrity: sha512-93y1gcONABZ7uqYe/JWDVQP/Pj/sQSunF0HVAPdlg/pfBnOyBMLlQUxWvkqcljJg1+W6cjvPuYD+r1Th9Tn8mA==}
     dev: true
 
-  /electron-to-chromium@1.4.745:
-    resolution: {integrity: sha512-tRbzkaRI5gbUn5DEvF0dV4TQbMZ5CLkWeTAXmpC9IrYT+GE+x76i9p+o3RJ5l9XmdQlI1pPhVtE9uNcJJ0G0EA==}
+  /electron-to-chromium@1.4.746:
+    resolution: {integrity: sha512-jeWaIta2rIG2FzHaYIhSuVWqC6KJYo7oSBX4Jv7g+aVujKztfvdpf+n6MGwZdC5hQXbax4nntykLH2juIQrfPg==}
     dev: true
 
   /emoji-regex@8.0.0:
